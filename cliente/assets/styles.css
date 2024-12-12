@@ -1,0 +1,94 @@
+/* Estilo general del cuerpo y la página */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor principal de la interfaz de juego */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Tablero donde estarán las cartas */
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+/* Estilo para los contenedores de cada palo */
+.containers {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Estilos para cada contenedor de palo */
+.container {
+    width: 120px;
+    height: 160px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilos para las cartas */
+.card {
+    width: 90px;
+    height: 130px;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.card-value {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo para el ícono */
+.card-icon i {
+    font-size: 30px;
+    color: inherit;
+    margin: 10px 0;
+}
+
+.card[data-suit="hearts"] { background-color: red; color: white; }
+.card[data-suit="diamonds"] { background-color: blue; color: white; }
+.card[data-suit="clubs"] { background-color: green; color: white; }
+.card[data-suit="spades"] { background-color: black; color: white; }
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+/* Resaltar el contenedor cuando una carta es arrastrada sobre él */
+.container.hovered {
+    border-color: #f39c12;
+    background-color: #fdf2c6;
+}
